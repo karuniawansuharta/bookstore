@@ -27,7 +27,22 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => res.sendFile(__dirname + '/public/views/web/index.html'));
+//app.get('/', (req, res) => res.send('What are you doing here!'));
+app.get('/', (request, response) => {
+  response.render('index', {
+    title: 'BookStore',
+    name: 'BookStore',
+    baseurl: 'http://localhost:8080/'
+  });
+});
+
+app.get('/about', (request, response) => {
+  response.render('about', {
+    title: 'BookStore',
+    name: 'BookStore',
+    baseurl: 'http://localhost:8080/'
+  });
+});
 
 // catch routing
 require("./routes")(app);

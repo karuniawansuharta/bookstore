@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(content='IE=edge' http-equiv='X-UA-Compatible')
+  meta(content='width=device-width,initial-scale=1' name='viewport')
+  meta(content='description' name='description')
+  meta(name='google' content='notranslate')
+  meta(content='Mashup templates have been developped by Orson.io team' name='author')
+  // Disable tap highlight on IE
+  meta(name='msapplication-tap-highlight' content='no')
+  link(href='/assets/apple-icon-180x180.png' rel='apple-touch-icon')
+  link(href='/assets/favicon.ico' rel='icon')
+  title #{ site_title }
+  link(href='/assets/main.82cfd66e.css' rel='stylesheet')
+// Add your content of header
+header
+  .navbar.navbar-default.visible-xs
+    button.navbar-toggle.collapsed(type='button')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.navbar-brand(href='/') #{ site_title }
+  nav.sidebar
+    #navbar-collapse.navbar-collapse
+      .site-header.hidden-xs
+        a.site-brand(href='/' title='')
+          img.img-responsive.site-logo(alt='' src='./assets/images/bookstore-logo.png')
+          |             #{ site_title }
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          | tempor.
+      ul.nav
+        li
+          a(href='/' title='') Home
+        li
+          a(href='/books' title='') Books
+        li
+          a(href='/about' title='') About
+        li
+          a(href='./' title='') Contact
+        li
+      nav.nav-footer
+        p.nav-footer-social-buttons
+          a.fa-icon(href='https://www.instagram.com/' title='')
+            i.fa.fa-instagram
+          a.fa-icon(href='https://dribbble.com/' title='')
+            i.fa.fa-dribbble
+          a.fa-icon(href='https://twitter.com/' title='')
+            i.fa.fa-twitter
+        p
+          | &copy; Untitled | Website created with 
+          a(href='http://www.mashup-template.com/' title='Create website with free html template') Mashup Template
+          | /
+          a(href='https://www.unsplash.com/' title='Beautiful Free Images') Unsplash
